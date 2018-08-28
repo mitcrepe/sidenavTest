@@ -1,0 +1,14 @@
+<mat-sidenav-container>
+    <mat-sidenav width="50px" mode="side" opened>
+            <a class="help-btn" href="#"><i class="material-icons">help_outline</i><div class="menu-text" [@slideInOut]="sidebarTextVisible"> SMSCAN</div></a>
+            <a class="side-btn" href="#"><i class="material-icons">attach_file</i><div class="menu-text" [@slideInOut]="sidebarTextVisible"> Documents</div></a>
+            <a class="side-btn" href="#"><i class="material-icons">settings</i><div class="menu-text" [@slideInOut]="sidebarTextVisible"> Settings</div></a>
+            <button mat-icon-button (click)="sidebarToggle()">
+                <mat-icon>{{sidebarButtonType}}</mat-icon>
+            </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <h1>SMSCAN</h1>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
