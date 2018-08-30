@@ -1,14 +1,37 @@
 <mat-sidenav-container>
-    <mat-sidenav width="50px" mode="side" opened>
-            <a class="help-btn" href="#"><i class="material-icons">help_outline</i><div class="menu-text" [@slideInOut]="sidebarTextVisible"> SMSCAN</div></a>
-            <a class="side-btn" href="#"><i class="material-icons">attach_file</i><div class="menu-text" [@slideInOut]="sidebarTextVisible"> Documents</div></a>
-            <a class="side-btn" href="#"><i class="material-icons">settings</i><div class="menu-text" [@slideInOut]="sidebarTextVisible"> Settings</div></a>
+    <mat-sidenav mode="side" opened [@slideInOut]="isExpanded">
+        <div class="menu-header">
+            <a class="help-btn" href="#">
+                <i class="material-icons">help</i>
+            </a>
+            <span>it.capture</span>
             <button mat-icon-button (click)="sidebarToggle()">
-                <mat-icon>{{sidebarButtonType}}</mat-icon>
+                <mat-icon>close</mat-icon>
             </button>
+        </div>
+        <div class="menu-content">
+            <a class="side-btn" href="#">
+                <i class="material-icons">today</i>
+                <span> JOBS</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a class="side-btn" href="#">
+                <i class="material-icons">all_inbox</i>
+                <span> INBOX</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a class="side-btn" href="#">
+                <i class="material-icons">scanner</i>
+                <span> SCAN</span>
+            </a>
+        </div>
+
+            
+
     </mat-sidenav>
     <mat-sidenav-content>
         <h1>SMSCAN</h1>
+        {{isExpanded}}
     </mat-sidenav-content>
 </mat-sidenav-container>
 
