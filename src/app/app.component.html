@@ -1,10 +1,10 @@
 <mat-sidenav-container>
     <mat-sidenav mode="side" opened [@slideInOut]="isExpanded">
         <div class="menu-header">
-            <a class="help-btn" href="#">
+            <a class="help-btn" href="#" *ngIf="isExpanded">
                 <i class="material-icons">help</i>
             </a>
-            <span>it.capture</span>
+            <span *ngIf="isExpanded">it.capture</span>
             <button mat-icon-button (click)="sidebarToggle()">
                 <mat-icon>close</mat-icon>
             </button>
@@ -12,17 +12,17 @@
         <div class="menu-content">
             <a class="side-btn" href="#">
                 <i class="material-icons">today</i>
-                <span> JOBS</span>
+                <span *ngIf="isExpanded"> JOBS</span>
             </a>
             <mat-divider></mat-divider>
             <a class="side-btn" href="#">
                 <i class="material-icons">all_inbox</i>
-                <span> INBOX</span>
+                <span *ngIf="isExpanded"> INBOX</span>
             </a>
             <mat-divider></mat-divider>
             <a class="side-btn" href="#">
                 <i class="material-icons">scanner</i>
-                <span> SCAN</span>
+                <span *ngIf="isExpanded"> SCAN</span>
             </a>
         </div>
 
