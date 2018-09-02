@@ -1,10 +1,10 @@
 <mat-sidenav-container>
     <mat-sidenav mode="side" opened [@slideInOut]="isExpanded">
         <div class="menu-header">
-            <a class="help-btn" href="#" *ngIf="isExpanded">
+            <a class="help-btn" href="#" *ngIf="isExpanded" [@fadeInOut]>
                 <i class="material-icons">help</i>
             </a>
-            <span *ngIf="isExpanded">it.capture</span>
+            <span *ngIf="isExpanded" [@fadeInOut]>it.capture</span>
             <button mat-icon-button (click)="sidebarToggle()">
                 <!--<mat-icon>{{sidebarButtonType}}</mat-icon>-->
                 <app-burger [state]="menuState"></app-burger>
@@ -13,17 +13,17 @@
         <div class="menu-content">
             <a class="side-btn" href="#">
                 <i class="material-icons">today</i>
-                <span *ngIf="isExpanded"> JOBS</span>
+                <span *ngIf="isExpanded" [@fadeInOut]> JOBS</span>
             </a>
             <mat-divider></mat-divider>
             <a class="side-btn" href="#">
                 <i class="material-icons">all_inbox</i>
-                <span *ngIf="isExpanded"> INBOX</span>
+                <span *ngIf="isExpanded" [@fadeInOut]> INBOX</span>
             </a>
             <mat-divider></mat-divider>
             <a class="side-btn" href="#">
                 <i class="material-icons">scanner</i>
-                <span *ngIf="isExpanded"> SCAN</span>
+                <span *ngIf="isExpanded" [@fadeInOut]> SCAN</span>
             </a>
         </div>
 
@@ -31,8 +31,7 @@
 
     </mat-sidenav>
     <mat-sidenav-content>
-        <h1>SMSCAN</h1>
-        {{isExpanded}}
+        <h1>it.capture</h1>
     </mat-sidenav-content>
 </mat-sidenav-container>
 

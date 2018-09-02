@@ -20,6 +20,9 @@ export const slideInOut = trigger('slideInOut', [
         query('@thirdLine', [
           animateChild()
         ]),
+        query('@fadeInOut', [
+            animateChild()
+        ]),
     ]),
     ]),
     transition('false => true', [group([
@@ -35,6 +38,23 @@ export const slideInOut = trigger('slideInOut', [
         query('@thirdLine', [
           animateChild()
         ]),
+        query('@fadeInOut', [
+            animateChild()
+        ]),
     ]
     )])
+]);
+
+export const fadeInOut = trigger('fadeInOut', [
+    transition(':enter',  [
+        style({ opacity: '0' }),
+        animate('200ms 70ms ease', style({
+            opacity: '1'
+        })),
+    ]),
+    transition(':leave',  [
+        animate('200ms ease', style({
+            opacity: '0'
+        })),
+    ])
 ]);

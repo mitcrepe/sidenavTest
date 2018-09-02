@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition, group, animateChild, query } from '@angular/animations';
-import { slideInOut } from './app.animations';
+import { slideInOut, fadeInOut } from './app.animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    slideInOut
+    slideInOut,
+    fadeInOut
   ]
   
 })
