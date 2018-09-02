@@ -6,7 +6,8 @@
             </a>
             <span *ngIf="isExpanded">it.capture</span>
             <button mat-icon-button (click)="sidebarToggle()">
-                <mat-icon>close</mat-icon>
+                <!--<mat-icon>{{sidebarButtonType}}</mat-icon>-->
+                <app-burger [state]="menuState"></app-burger>
             </button>
         </div>
         <div class="menu-content">
