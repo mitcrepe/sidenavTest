@@ -72,6 +72,11 @@ mat-sidenav {
             color: wheat;
         }
 
+        span {
+            line-height: 44px;
+            margin-left: 25px;
+        }
+
         button {
             float: right;
             position: fixed;
@@ -93,6 +98,10 @@ mat-sidenav {
 
         a:hover {
             color: red;
+        }
+
+        span {
+            margin-left: 5px;
         }
     }
 }

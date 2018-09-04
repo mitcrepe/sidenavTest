@@ -1,4 +1,4 @@
-import { trigger, state, style, animate, transition, group, animateChild, query, useAnimation } from '@angular/animations';
+import { trigger, state, style, animate, transition, group, animateChild, query, useAnimation, keyframes } from '@angular/animations';
 
 export const slideInOut = trigger('slideInOut', [
     state('true', style({
@@ -8,9 +8,10 @@ export const slideInOut = trigger('slideInOut', [
         'width': '50px'
     })),
     transition('true => false', [group([
-        animate('250ms ease', style({
-          'width': '50px'
-        })),
+        animate('400ms ease', keyframes([
+            style({ 'width' : '45px', offset: 0.8}),
+            style({ 'width' : '50px', offset: 0.9})
+        ])),
         query('@firstLine', [
           animateChild()
         ]),
