@@ -12,6 +12,11 @@
         </div>
         <div class="menu-content">
             <a class="side-btn" href="#">
+                <i class="material-icons">account_box</i>
+                <span *ngIf="isExpanded" [@fadeInOut]> LOGIN</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a class="side-btn" href="#">
                 <i class="material-icons">today</i>
                 <span *ngIf="isExpanded" [@fadeInOut]> JOBS</span>
             </a>
