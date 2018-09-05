@@ -6,10 +6,10 @@ import {
     transition
   } from '@angular/animations';
 
-  export function burgerLineAnimation(name: string, yOffset: string, finalDegrees: string){
+  export function burgerLineAnimation(name: string, yOffset: string, finalDegrees: number){
     return trigger(name, [
         state('open', style({
-          transform: `translateY(${yOffset}) rotate(${finalDegrees})`,
+          transform: `translateY(${yOffset}) rotate(${finalDegrees}deg)`,
         })),
         state('close', style({
             transform: `translateY(0px) rotate(0deg)`,
@@ -18,8 +18,11 @@ import {
           animate(`200ms ease`, style({
             transform: `translateY(${yOffset})`
           })),
-          animate(`300ms ease`, style({
-            transform: `translateY(${yOffset}) rotate(${finalDegrees})`
+          animate(`70ms linear`, style({
+            transform: `translateY(${yOffset}) rotate(${finalDegrees/2}deg)`
+          })),
+          animate(`200ms ease-out`, style({
+            transform: `translateY(${yOffset}) rotate(${finalDegrees}deg)`
           })),
         ]),
     

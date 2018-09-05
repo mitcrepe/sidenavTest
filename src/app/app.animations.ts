@@ -12,36 +12,19 @@ export const slideInOut = trigger('slideInOut', [
             style({ 'width' : '45px', offset: 0.8}),
             style({ 'width' : '50px', offset: 0.9})
         ])),
-        query('@firstLine', [
+        query('@*', [
           animateChild()
-        ]),
-        query('@secondLine', [
-          animateChild()
-        ]),
-        query('@thirdLine', [
-          animateChild()
-        ]),
-        query('@fadeInOut', [
-            animateChild()
-        ]),
+        ])
     ]),
     ]),
     transition('false => true', [group([
-        animate('250ms ease', style({
-          'width': '250px'
-        })),
-        query('@firstLine', [
+        animate('400ms ease', keyframes([
+            style({ 'width' : '260px', offset: 0.8}),
+            style({ 'width' : '250px', offset: 0.9})
+        ])),
+        query('@*', [
           animateChild()
-        ]),
-        query('@secondLine', [
-          animateChild()
-        ]),
-        query('@thirdLine', [
-          animateChild()
-        ]),
-        query('@fadeInOut', [
-            animateChild()
-        ]),
+        ])
     ]
     )])
 ]);

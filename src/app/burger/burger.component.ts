@@ -7,9 +7,9 @@ import { burgerLineAnimation } from './burger.animations';
   templateUrl: './burger.component.html',
   styleUrls: ['./burger.component.scss'],
   animations: [
-    burgerLineAnimation('firstLine', '8px', '45deg'),
-    burgerLineAnimation('secondLine', '0px', '135deg'),
-    burgerLineAnimation('thirdLine', '-8px', '135deg')
+    burgerLineAnimation('firstLine', '8px', 225),
+    burgerLineAnimation('secondLine', '0px', 315),
+    burgerLineAnimation('thirdLine', '-8px', 315)
   ]
 })
 export class BurgerComponent implements OnInit {
