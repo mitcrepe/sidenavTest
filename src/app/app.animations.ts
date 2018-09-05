@@ -42,3 +42,25 @@ export const fadeInOut = trigger('fadeInOut', [
         })),
     ])
 ]);
+
+export const marginAdjust = trigger('marginAdjust', [
+    state('true', style({
+        'margin-left': '250px'
+    })),
+    state('false', style({
+        'margin-left': '50px'
+    })),
+    transition('true => false', [group([
+        animate('400ms ease', keyframes([
+            style({ 'margin-left' : '50px'}),
+        ])),
+    ]),
+    ]),
+    transition('false => true', [group([
+        animate('200ms ease', keyframes([
+            style({ 'margin-left' : '250px'}),
+            
+        ])),
+    ]
+    )])
+]);

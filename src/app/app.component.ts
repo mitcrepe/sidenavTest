@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition, group, animateChild, query } from '@angular/animations';
-import { slideInOut, fadeInOut } from './app.animations';
+import { slideInOut, fadeInOut, marginAdjust } from './app.animations';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,8 @@ import { slideInOut, fadeInOut } from './app.animations';
   styleUrls: ['./app.component.scss'],
   animations: [
     slideInOut,
-    fadeInOut
+    fadeInOut,
+    marginAdjust
   ]
   
 })
@@ -27,5 +28,9 @@ export class AppComponent {
       this.sidebarButtonType = "menu";
       this.menuState = 'close';
     }
+  }
+
+  onFinish(){
+    console.log("it finished!!!");
   }
 }
