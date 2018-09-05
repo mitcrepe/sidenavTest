@@ -27,10 +27,10 @@ import {
         ]),
     
         transition('open => close', [
-          animate(`200ms ease`, style({
+          animate(`250ms ease`, style({
             transform: `translateY(${yOffset}) rotate(0deg)`
           })),
-          animate(`300ms ease`, style({
+          animate(`250ms ease`, style({
             transform: `translateY(0px) rotate(0deg)`
           })),
         ])
