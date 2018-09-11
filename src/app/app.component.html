@@ -16,7 +16,7 @@
                 <span *ngIf="isExpanded" [@fadeInOut]> LOGIN</span>
             </a>
             <mat-divider></mat-divider>
-            <a class="side-btn" href="#">
+            <a class="side-btn" routerLink="/jobs">
                 <i class="material-icons">today</i>
                 <span *ngIf="isExpanded" [@fadeInOut]> JOBS</span>
             </a>
@@ -35,7 +35,7 @@
     </mat-sidenav>
     <mat-sidenav-content [@marginAdjust]="isExpanded">
         <div class="splash">
-            <h1>it.capture</h1>
+            <router-outlet></router-outlet>
         </div>
         
     </mat-sidenav-content>
