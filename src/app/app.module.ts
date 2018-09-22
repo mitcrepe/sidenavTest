@@ -7,20 +7,21 @@ import { MaterialModule } from './material';
 import { BurgerComponent } from './burger/burger.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
-import { JobsviewComponent } from './jobsview/jobsview.component';
+
+import { JobsViewModule } from './jobs-view/jobs-view.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     BurgerComponent,
     HomepageComponent,
-    JobsviewComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    JobsViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
