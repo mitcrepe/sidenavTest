@@ -1,3 +1,5 @@
-<p>
-  jobs-view works!
-</p>
+<div class="container" (mousemove)="onResizerMove($event)">
+    <div id="div1" [style.height.px]='div1Height'>This is div 1</div>
+    <div id="resizer" [style.top.px]='div1Height' (mousedown)="onResizerMouseDown($event)" (mouseup)="onResizerMouseUp($event)" ></div>
+    <div id="div2" [style.top.px]='div1Height'>That is div 2<br>hokokoko<br>kosdkoakdoas<br>some buttons<br>Button<br><br>sdasd<br>sdeef<br>sadawdafdf<br>BUTTON<br></div>
+</div>

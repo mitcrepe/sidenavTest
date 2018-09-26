@@ -1,0 +1,30 @@
+.container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+}
+
+#div1 {
+    height: 50%;
+}
+
+#resizer {
+    height: 10px;
+    top: 50%;
+    width: 100%;
+    background-color: gray;
+    cursor: s-resize;   
+    position: absolute;
+    z-index: 999;
+}
+
+#div2 {
+    overflow: auto;
+    top: 50%;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}

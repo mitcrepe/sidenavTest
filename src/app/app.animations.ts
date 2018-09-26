@@ -51,13 +51,13 @@ export const marginAdjust = trigger('marginAdjust', [
         'margin-left': '50px'
     })),
     transition('true => false', [group([
-        animate('300ms ease', keyframes([
+        animate('250ms ease', keyframes([
             style({ 'margin-left' : '50px'}),
         ])),
     ]),
     ]),
     transition('false => true', [group([
-        animate('200ms ease', keyframes([
+        animate('250ms ease', keyframes([
             style({ 'margin-left' : '250px'}),
             
         ])),
