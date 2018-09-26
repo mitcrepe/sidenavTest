@@ -1,46 +1,3 @@
-// mat-sidenav {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     background-color: #ddd;
-//     height: 100%;
-//     transition: max-width 1s;
-
-//     a {
-//         display: block;
-//         text-decoration: none;
-//         font-size: 20px;
-//         padding: 10px 10px 7px 10px;
-//         color: rgb(43, 43, 43);
-//     }
-
-//     .side-btn:hover {
-//         color: rgb(200, 0, 0);;
-//     }
-
-//     .help-btn {
-//         background-color: red;
-//         color: white;
-//     }
-
-//     .help-btn:hover {
-//         color: rgb(243, 212, 177);
-//     }
-
-//     button {
-//         bottom: 0;
-//         right: 0;
-//         position: absolute;
-//     }
-
-//     .menu-text {
-//         display: inline-flex;
-//         padding-left: 15px;
-//         padding-right: 15px;
-//         overflow-x: hidden;
-//     }
-// }
-
 mat-sidenav {
     position: fixed;
     top: 0;
@@ -53,7 +10,6 @@ mat-sidenav {
     .menu-header {
         background-color: red;
         color: white;
-        //text-align: center;
         height: 50px;
         font-size: 22px;
 
@@ -115,5 +71,4 @@ mat-sidenav-content {
     position: fixed;
     width: 100%;
     height: 100%;
-    //overflow: hidden;
 }
